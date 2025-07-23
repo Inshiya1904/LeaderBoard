@@ -10,54 +10,43 @@ function App() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
-  console.log("History", history);
-  console.log("leaderboard", leaderboard);
+
+  const BASE_URL = "https://leaderboard-backend-mf4p.onrender.com/api/users";
 
   const fetchUsers = async () => {
-    const res = await axios.get("https://leaderboard-backend-mf4p.onrender.com/api/users");
-    console.log(res);
+    const res = await axios.get(`${BASE_URL}`);
     setUsers(res.data);
-    
   };
 
   const claimPoints = async () => {
     if (!selectedUser) return alert("Select a user first");
-    const res = await axios.post(
-      `https://leaderboard-backend-mf4p.onrender.com/api/users/claim/${selectedUser}`
-    );
+    const res = await axios.post(`${BASE_URL}/claim/${selectedUser}`);
     setMessage(res.data.message);
-    console.log(res);
     fetchUsers();
     fetchLeaderBoard();
-    setSelectedUser("")
+    setSelectedUser("");
   };
 
   const addUser = async () => {
     if (!newUser) return;
-    await axios.post("https://leaderboard-backend-mf4p.onrender.com/api/users", { name: newUser });
+    await axios.post(`${BASE_URL}`, { name: newUser });
     setNewUser("");
     fetchUsers();
     fetchLeaderBoard();
   };
 
   const fetchLeaderBoard = async () => {
-    const res = await axios.get("https://leaderboard-backend-mf4p.onrender.com/api/users/leaderboard");
-    console.log("Response", res);
+    const res = await axios.get(`${BASE_URL}/leaderboard`);
     setLeaderboard(res.data);
   };
 
   const handleDelete = async (id) => {
-    const res = await axios.delete(`https://leaderboard-backend-mf4p.onrender.com/api/users/${id}`);
-    console.log(id);
+    await axios.delete(`${BASE_URL}/${id}`);
     fetchLeaderBoard();
   };
 
   const handleHistoryView = async (id) => {
-    const res = await axios.get(
-      `https://leaderboard-backend-mf4p.onrender.com/api/users/history/${id}`
-    );
-    console.log(res);
-    console.log(id);
+    const res = await axios.get(`${BASE_URL}/history/${id}`);
     setHistory(res.data);
     setShowHistory(true);
   };
@@ -111,31 +100,25 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {/* {users
-              .sort((a, b) => b.totalPoints - a.totalPoints)
-              .map((user, index) => (
-                <tr key={user._id}>
-                  <td>{index + 1}</td>
-                  <td>{user.name}</td>
-                  <td>{user.totalPoints}</td>
-                </tr>
-              ))} */}
             {leaderboard.map((user, index) => (
               <tr key={index}>
                 <td>{user.rank}</td>
                 <td>{user.name}</td>
                 <td>{user.totalPoints}</td>
                 <td onClick={() => handleDelete(user.userId)}>Delete</td>
-                <td onClick={() => handleHistoryView(user.userId)}>View </td>
+                <td onClick={() => handleHistoryView(user.userId)}>View</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+
       <div className="history-board">
         {showHistory && (
           <div className="history-info">
-            <h3>{`Reward Points of ${history.length > 0 ? history[0].userName : "User"}`}</h3>
+            <h3>{`Reward Points of ${
+              history.length > 0 ? history[0].userName : "User"
+            }`}</h3>
             {history.length > 0 ? (
               history.map((user, index) => (
                 <div key={index}>
