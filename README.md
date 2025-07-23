@@ -16,7 +16,7 @@ A full-stack **Leaderboard App** built with **ReactJS**, **Node.js**, **Express*
 
 ##  Live Preview
 
-🌐 [Demo Link (If deployed)](https://leaderboard-frontend-vh2l.onrender.com)
+ [Demo Link (If deployed)](https://leaderboard-frontend-vh2l.onrender.com)
 
 ---
 
@@ -69,14 +69,14 @@ cd Backend
 npm install
 ```
 
-### 5. Start Both Servers
+### 5. Start Servers
 ```bash
 # Start Backend
 cd Backend
 npm run dev
 ```
 
-### 6. In another terminal, start Frontend
+### 6. start Frontend
 ```bash
 cd Frontend
 npm run dev
