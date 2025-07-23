@@ -1,4 +1,4 @@
-# 🏆 Leaderboard Application
+# Leaderboard Application
 
 A full-stack **Leaderboard App** built with **ReactJS**, **Node.js**, **Express**, and **MongoDB**. Users can:
 - Select a username
@@ -8,28 +8,28 @@ A full-stack **Leaderboard App** built with **ReactJS**, **Node.js**, **Express*
 
 ---
 
-## 🖼️ UI Preview
+## UI Preview
 
 ![Project Screenshot](./Frontend/public/Screenshot.png)
 
 ---
 
-## 🚀 Live Preview
+##  Live Preview
 
 🌐 [Demo Link (If deployed)](https://leaderboard-frontend-vh2l.onrender.com)
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔢 Real-time leaderboard with dynamic ranks
-- 👤 User selection from top 10 (or add new)
-- 🎲 Random points generator (1–10 points)
-- 🧾 Claim history tracking
-- 💾 MongoDB storage
+- Real-time leaderboard with dynamic ranks
+- User selection from top 10 (or add new)
+- Random points generator (1–10 points)
+- Claim history tracking
+- MongoDB storage
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 **Frontend:**
 - ReactJS
@@ -43,13 +43,13 @@ A full-stack **Leaderboard App** built with **ReactJS**, **Node.js**, **Express*
 
 ---
 
-## 🔑 .env Configuration
+## .env Configuration
 
 For `Backend/.env`:
 
 ---
 
-## 🛠️ Installation Steps
+## 🛠Installation Steps
 
 ### 1. Clone the Repository
 ```bash
