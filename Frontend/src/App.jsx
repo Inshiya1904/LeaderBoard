@@ -14,7 +14,7 @@ function App() {
   console.log("leaderboard", leaderboard);
 
   const fetchUsers = async () => {
-    const res = await axios.get("http://localhost:3000/api/users");
+    const res = await axios.get("https://leaderboard-backend-mf4p.onrender.com/api/users");
     console.log(res);
     setUsers(res.data);
     
@@ -23,7 +23,7 @@ function App() {
   const claimPoints = async () => {
     if (!selectedUser) return alert("Select a user first");
     const res = await axios.post(
-      `http://localhost:3000/api/users/claim/${selectedUser}`
+      `https://leaderboard-backend-mf4p.onrender.com/api/users/claim/${selectedUser}`
     );
     setMessage(res.data.message);
     console.log(res);
@@ -34,27 +34,27 @@ function App() {
 
   const addUser = async () => {
     if (!newUser) return;
-    await axios.post("http://localhost:3000/api/users", { name: newUser });
+    await axios.post("https://leaderboard-backend-mf4p.onrender.com/api/users", { name: newUser });
     setNewUser("");
     fetchUsers();
     fetchLeaderBoard();
   };
 
   const fetchLeaderBoard = async () => {
-    const res = await axios.get("http://localhost:3000/api/users/leaderboard");
+    const res = await axios.get("https://leaderboard-backend-mf4p.onrender.com/api/users/leaderboard");
     console.log("Response", res);
     setLeaderboard(res.data);
   };
 
   const handleDelete = async (id) => {
-    const res = await axios.delete(`http://localhost:3000/api/users/${id}`);
+    const res = await axios.delete(`https://leaderboard-backend-mf4p.onrender.com/api/users/${id}`);
     console.log(id);
     fetchLeaderBoard();
   };
 
   const handleHistoryView = async (id) => {
     const res = await axios.get(
-      `http://localhost:3000/api/users/history/${id}`
+      `https://leaderboard-backend-mf4p.onrender.com/api/users/history/${id}`
     );
     console.log(res);
     console.log(id);
