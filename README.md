@@ -1,6 +1,10 @@
-# 🧠 Mental Wellness Lending Page - MERN Stack
+# 🏆 Leaderboard Application
 
-A professional and responsive mental wellness landing page built using the MERN stack. It allows users to learn about services, submit enquiries, and explore pricing packages. The admin panel supports secure login and full CRUD operations for managing pricing and enquiries.
+A full-stack **Leaderboard App** built with **ReactJS**, **Node.js**, **Express**, and **MongoDB**. Users can:
+- Select a username
+- Claim random points (1–10)
+- View dynamic leaderboard rankings
+- Track individual claim history
 
 ---
 
@@ -12,41 +16,30 @@ A professional and responsive mental wellness landing page built using the MERN 
 
 ## 🚀 Live Preview
 
-🌐 [Demo Link (If deployed)](https://your-deployment-link.com)
+🌐 [Demo Link (If deployed)](https://leaderboard-frontend-vh2l.onrender.com)
 
 ---
 
 ## ✨ Features
 
-### 🌐 Public (Landing Page)
-- Responsive UI with Tailwind CSS
-- Informative sections (About, Services, Testimonials, Contact)
-- Pricing plans loaded from MongoDB
-- Contact form for enquiries
-
-### 🔐 Admin Panel
-- Admin login with JWT authentication
-- Protected routes for managing data
-- CRUD operations for pricing packages
-- View submitted enquiries from users
-
+- 🔢 Real-time leaderboard with dynamic ranks
+- 👤 User selection from top 10 (or add new)
+- 🎲 Random points generator (1–10 points)
+- 🧾 Claim history tracking
+- 💾 MongoDB storage
 ---
 
 ## 🔧 Tech Stack
 
-### 🖼 Frontend:
-- React.js
-- Tailwind CSS
-- React Router DOM
+**Frontend:**
+- ReactJS
 - Axios
-- React Hot Toast
 
-### ⚙️ Backend:
+**Backend:**
 - Node.js
 - Express.js
-- MongoDB with Mongoose
-- JWT Authentication
-- CORS
+- MongoDB (Mongoose)
+- Cors
 
 ---
 
@@ -60,19 +53,13 @@ For `Backend/.env`:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Inshiya1904/MetalWellness-Lendingpage-MERN.git
-cd MetalWellness-Lendingpage-MERN
+git clone https://github.com/Inshiya1904/LeaderBoard.git
+cd LeaderBoard
 ```
 
 ### 2. Install Client Dependencies
 ```bash
 cd Frontend
-npm install
-```
-
-### 3. Install Admin Dependencies
-```bash
-cd Admin
 npm install
 ```
 
@@ -95,8 +82,4 @@ cd Frontend
 npm run dev
 ```
 
-### 7. In another terminal, start Admin
-```bash
-cd Admin
-npm run dev
-```
+
