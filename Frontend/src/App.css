@@ -1,0 +1,128 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  padding: 30px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 25px;
+}
+
+/* User form */
+.user-form {
+  display: flex;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.user-form input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2c2c2c;
+  color: #fff;
+
+}
+
+/* Selection */
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2c2c2c;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.add-user{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+/* Leaderboard */
+.leaderboard {
+  margin-top: 20px;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 12px;
+  text-align: center;
+}
+
+.leaderboard th {
+  background-color: #2f2f2f;
+  color: gold;
+}
+
+.leaderboard tr:nth-child(even) {
+  background-color: #1c1c1c;
+}
+
+.leaderboard tr:nth-child(odd) {
+  background-color: #262626;
+}
+
+.leaderboard tr:hover {
+  background-color: #333;
+}
+
+/* Top 3 highlight */
+.leaderboard tr:nth-child(1) td {
+  color: gold;
+  font-weight: bold;
+}
+
+.leaderboard tr:nth-child(2) td {
+  color: silver;
+}
+
+.leaderboard tr:nth-child(3) td {
+  color: #cd7f32;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .user-form {
+    flex-direction: column;
+  }
+
+  .user-form input,
+  .user-form button {
+    width: 100%;
+  }
+}
+
+button{
+  background-color: rgb(0, 221, 255);
+  padding: 7px 15px;
+  border: none;
+  border-radius: 3px;
+}
+button:hover{
+  background-color: rgb(129, 215, 229);
+}
