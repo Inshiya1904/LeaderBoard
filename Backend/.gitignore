@@ -1,0 +1,6 @@
+
+# Don't track environment variables
+.env
+
+# Don't track node modules
+node_modules
