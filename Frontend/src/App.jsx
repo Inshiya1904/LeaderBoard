@@ -11,7 +11,7 @@ function App() {
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
 
-  const BASE_URL = "https://leaderboard-backend-mf4p.onrender.com/api/users";
+  const BASE_URL = "https://leaderboard-backend-vntc.onrender.com/api/users";
 
   const fetchUsers = async () => {
     const res = await axios.get(`${BASE_URL}`);
